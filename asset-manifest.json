@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cryptico/static/css/main.ded28ade.css",
-    "main.js": "/cryptico/static/js/main.f5b04693.js",
-    "static/js/787.3c30b94a.chunk.js": "/cryptico/static/js/787.3c30b94a.chunk.js",
-    "static/media/cryptico-logo-new.png": "/cryptico/static/media/cryptico-logo-new.b75390603a5c90cb6ba2.png",
-    "index.html": "/cryptico/index.html",
-    "main.ded28ade.css.map": "/cryptico/static/css/main.ded28ade.css.map",
-    "main.f5b04693.js.map": "/cryptico/static/js/main.f5b04693.js.map",
-    "787.3c30b94a.chunk.js.map": "/cryptico/static/js/787.3c30b94a.chunk.js.map"
+    "main.css": "/Cryptico/static/css/main.6ee85b52.css",
+    "main.js": "/Cryptico/static/js/main.41487f44.js",
+    "static/js/787.3c30b94a.chunk.js": "/Cryptico/static/js/787.3c30b94a.chunk.js",
+    "static/media/cryptico-logo-new.png": "/Cryptico/static/media/cryptico-logo-new.b75390603a5c90cb6ba2.png",
+    "index.html": "/Cryptico/index.html",
+    "main.6ee85b52.css.map": "/Cryptico/static/css/main.6ee85b52.css.map",
+    "main.41487f44.js.map": "/Cryptico/static/js/main.41487f44.js.map",
+    "787.3c30b94a.chunk.js.map": "/Cryptico/static/js/787.3c30b94a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ded28ade.css",
-    "static/js/main.f5b04693.js"
+    "static/css/main.6ee85b52.css",
+    "static/js/main.41487f44.js"
   ]
 }
