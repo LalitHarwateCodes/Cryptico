@@ -1,0 +1,40 @@
+@media (max-width:690px){
+    .box{
+        grid-template-columns: 1fr;
+    }
+
+    .container-header{
+        margin-bottom: .5rem;
+        padding: 3rem;
+        padding: 0 2rem;
+      }
+
+      .header-tertiary{
+        font-size: 1rem;
+      }
+
+      .header-primary{
+        font-size: 3rem;
+      }
+
+      .header-secondary{
+        font-size: 1.5rem;
+      }
+
+      .logo{
+        width: 10rem;
+      }
+
+    
+    .section-header{
+        padding: 3.2rem 0;
+    }
+      .search-bar{
+        /* padding: 1.2rem 1.5rem 1.2rem 1rem ; */
+        margin-bottom: 3rem;
+      }
+
+      .error-box{
+        font-size: 2rem;
+      }
+}
