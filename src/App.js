@@ -3,24 +3,27 @@ import axios from 'axios'
 import './App.css';
 import Coin from './components/Coin';
 import './query.css'
+import CardSkeleton from './components/CardSkeleton';
 
 function App() {
 
   const [coins,setCoins] = useState([])
-  const [error,setError] = useState('')
+  const [error,setError] = useState(false)
   const [search,setSearch] = useState('')
   const [loading,setLoading] = useState(true)
 
+
   useEffect(()=>{
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=200&page=1&sparkline=false&locale=en')
+    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en')
     .then(res => {
       console.log(res.data)
       setCoins(res.data)
       setLoading(false)
+      setError(false)
     })
     .catch(err => {
       console.log("Error")
-      setError("Something went Wrong")
+      setError(true)
       setLoading(false)
     }
     ) 
@@ -52,12 +55,9 @@ function App() {
     <div className='search'>
     <input className='search-bar' type='text' placeholder='Search cryptocurrency' value={search} onChange={e => setSearch(e.target.value)}/>
     </div>
-    {
-      loading?<h3 className='error-box'>Loading...</h3>:
-      <div className='box'>
-    {
-      
-     filterCoin.map(coin => (
+    <div className='box'>
+    {loading&&<CardSkeleton card={9}/ >}
+   {filterCoin.map(coin => (
         <Coin 
           key={coin.id}
           name={coin.name}
@@ -68,13 +68,18 @@ function App() {
           price={coin.current_price}
           priceChange={coin.price_change_percentage_24h}
         />
-      ))
-    }
-    </div>
-    }
-    {error&&<h3 className='error-box'>{error} 😕</h3>}
-   
-   
+      ))}
+
+      {/* {error?<h3 className='error-box'>Something went wrong</h3>:<h3 className='error-box'>No Coin "{search}" Found</h3>} */}
+      </div>
+      {error?<h3 className='error-box'>Something went wrong</h3>:
+      
+        (!loading&&filterCoin.length===0)&&
+        <h3 className='error-box'>No Coin "{search}" Found</h3>
+      
+      }
+      
+  
     </div>
   );
 }

@@ -174,11 +174,13 @@ html{
 }
 
 .error-box{
+  display: flex;
   font-size: 3.6rem;
   text-align: center;
+  justify-content: center;
 }
 
-.error-box-2{
+/* .error-box-2{
   font-size: 2.4rem;
   text-align: center;
-}
+} */
